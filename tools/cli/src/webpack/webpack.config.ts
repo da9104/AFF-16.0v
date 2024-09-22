@@ -1,8 +1,8 @@
-import { execSync } from 'node:child_process';
+// import { execSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
 
 import type { BuildFlags } from '@affine/cli/config';
-import { Repository } from '@napi-rs/simple-git';
+// import { Repository } from '@napi-rs/simple-git';
 import HTMLPlugin from 'html-webpack-plugin';
 import { once } from 'lodash-es';
 import { merge } from 'webpack-merge';
@@ -17,15 +17,8 @@ const gitShortHash = once(() => {
   if (GITHUB_SHA) {
     return GITHUB_SHA.substring(0, 9);
   }
-  const repo = new Repository(workspaceRoot);
-  const shortSha = repo.head().target()?.substring(0, 9);
-  if (shortSha) {
-    return shortSha;
-  }
-  const sha = execSync(`git rev-parse --short HEAD`, {
-    encoding: 'utf-8',
-  }).trim();
-  return sha;
+  // Instead of fetching from git, return a static value or env var
+  return process.env.BUILD_VERSION || 'static-sha';
 });
 
 export function createWebpackConfig(cwd: string, flags: BuildFlags) {
