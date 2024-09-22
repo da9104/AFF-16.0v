@@ -1,0 +1,18 @@
+{
+  "name": "@affine-legacy/0.8.4",
+  "description": "AFFiNE 0.8.4 static output",
+  "scripts": {
+    "unzip": "wget -O static.zip https://github.com/toeverything/AFFiNE/releases/download/v0.8.4/web-static.zip && unzip static.zip",
+    "start": "yarn exec serve -s web-static -l 8081",
+    "e2e": "yarn playwright test"
+  },
+  "devDependencies": {
+    "@affine-test/fixtures": "workspace:*",
+    "@affine-test/kit": "workspace:*",
+    "@playwright/test": "=1.44.1",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
+    "serve": "^14.2.1"
+  },
+  "version": "0.15.0"
+}

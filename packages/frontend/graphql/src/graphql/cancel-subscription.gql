@@ -1,0 +1,11 @@
+mutation cancelSubscription(
+  $idempotencyKey: String!
+  $plan: SubscriptionPlan = Pro
+) {
+  cancelSubscription(idempotencyKey: $idempotencyKey, plan: $plan) {
+    id
+    status
+    nextBillAt
+    canceledAt
+  }
+}

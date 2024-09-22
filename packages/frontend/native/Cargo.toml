@@ -1,0 +1,31 @@
+[package]
+edition = "2021"
+name    = "affine_native"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+affine_schema = { path = "./schema" }
+anyhow        = { workspace = true }
+chrono        = { workspace = true }
+napi          = { workspace = true }
+napi-derive   = { workspace = true }
+notify        = { workspace = true, features = ["serde"] }
+once_cell     = { workspace = true }
+parking_lot   = { workspace = true }
+rand          = { workspace = true }
+serde         = { workspace = true }
+serde_json    = { workspace = true }
+sha3          = { workspace = true }
+sqlx          = { workspace = true, default-features = false, features = ["chrono", "macros", "migrate", "runtime-tokio", "sqlite", "tls-rustls"] }
+tokio         = { workspace = true, features = ["full"] }
+uuid          = { workspace = true, features = ["fast-rng", "serde", "v4"] }
+
+[build-dependencies]
+affine_schema = { path = "./schema" }
+dotenv        = { workspace = true }
+napi-build    = { workspace = true }
+sqlx          = { workspace = true, default-features = false, features = ["chrono", "json", "macros", "migrate", "runtime-tokio", "sqlite", "tls-rustls"] }
+tokio         = { workspace = true, features = ["full"] }

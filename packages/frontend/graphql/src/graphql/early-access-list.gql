@@ -1,0 +1,16 @@
+query earlyAccessUsers {
+  earlyAccessUsers {
+    id
+    name
+    email
+    avatarUrl
+    emailVerified
+    subscription {
+      plan
+      recurring
+      status
+      start
+      end
+    }
+  }
+}

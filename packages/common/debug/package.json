@@ -1,0 +1,13 @@
+{
+  "name": "@affine/debug",
+  "private": true,
+  "main": "./src/index.ts",
+  "dependencies": {
+    "debug": "^4.3.4"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "vitest": "1.6.0"
+  },
+  "version": "0.15.0"
+}

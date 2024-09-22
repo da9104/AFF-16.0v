@@ -1,0 +1,77 @@
+{
+  "name": "@toeverything/infra",
+  "type": "module",
+  "private": true,
+  "sideEffects": false,
+  "exports": {
+    "./blocksuite": "./src/blocksuite/index.ts",
+    "./storage": "./src/storage/index.ts",
+    "./utils": "./src/utils/index.ts",
+    "./app-config-storage": "./src/app-config-storage.ts",
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@affine/debug": "workspace:*",
+    "@affine/env": "workspace:*",
+    "@affine/templates": "workspace:*",
+    "@blocksuite/blocks": "0.17.0-canary-202408080742-0cbcb73",
+    "@blocksuite/global": "0.17.0-canary-202408080742-0cbcb73",
+    "@blocksuite/presets": "0.17.0-canary-202408080742-0cbcb73",
+    "@blocksuite/store": "0.17.0-canary-202408080742-0cbcb73",
+    "@datastructures-js/binary-search-tree": "^5.3.2",
+    "foxact": "^0.2.33",
+    "fuse.js": "^7.0.0",
+    "graphemer": "^1.4.0",
+    "idb": "^8.0.0",
+    "jotai": "^2.8.0",
+    "jotai-effect": "^1.0.0",
+    "lodash-es": "^4.17.21",
+    "nanoid": "^5.0.7",
+    "react": "18.3.1",
+    "yjs": "patch:yjs@npm%3A13.6.18#~/.yarn/patches/yjs-npm-13.6.18-ad0d5f7c43.patch",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@affine-test/fixtures": "workspace:*",
+    "@affine/templates": "workspace:*",
+    "@blocksuite/block-std": "0.17.0-canary-202408080742-0cbcb73",
+    "@blocksuite/presets": "0.17.0-canary-202408080742-0cbcb73",
+    "@testing-library/react": "^16.0.0",
+    "async-call-rpc": "^6.4.0",
+    "fake-indexeddb": "^6.0.0",
+    "react": "^18.2.0",
+    "rxjs": "^7.8.1",
+    "vite": "^5.2.8",
+    "vite-plugin-dts": "3.9.1",
+    "vitest": "1.6.0"
+  },
+  "peerDependencies": {
+    "@affine/templates": "*",
+    "@blocksuite/presets": "*",
+    "async-call-rpc": "*",
+    "electron": "*",
+    "react": "*",
+    "yjs": "^13"
+  },
+  "peerDependenciesMeta": {
+    "@affine/templates": {
+      "optional": true
+    },
+    "@blocksuite/presets": {
+      "optional": true
+    },
+    "async-call-rpc": {
+      "optional": true
+    },
+    "electron": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "yjs": {
+      "optional": true
+    }
+  },
+  "version": "0.15.0"
+}

@@ -1,0 +1,15 @@
+query subscription {
+  currentUser {
+    id
+    subscriptions {
+      id
+      status
+      plan
+      recurring
+      start
+      end
+      nextBillAt
+      canceledAt
+    }
+  }
+}

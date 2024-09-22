@@ -1,0 +1,15 @@
+{
+  "name": "@affine-test/affine-desktop-cloud",
+  "private": true,
+  "scripts": {
+    "e2e": "yarn playwright test"
+  },
+  "devDependencies": {
+    "@affine-test/fixtures": "workspace:*",
+    "@affine-test/kit": "workspace:*",
+    "@playwright/test": "=1.44.1",
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^11.2.0"
+  },
+  "version": "0.15.0"
+}

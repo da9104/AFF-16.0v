@@ -1,0 +1,51 @@
+global:
+  ingress:
+    enabled: false
+    className: ''
+    host: affine.pro
+    tls: []
+  secret:
+    secretName: 'server-private-key'
+    privateKey: ''
+  database:
+    user: 'postgres'
+    url: 'pg-postgresql'
+    port: '5432'
+    name: 'affine'
+    password: ''
+    gcloud:
+      enabled: false
+      # use for migration
+      cloudSqlInternal: ''
+      connectionName: ''
+      serviceAccount: ''
+      cloudProxyReplicas: 3
+      proxyPort: '5432'
+  redis:
+    enabled: true
+    host: 'redis-master'
+    port: '6379'
+    username: ''
+    password: ''
+    database: 0
+  gke:
+    enabled: true
+
+graphql:
+  service:
+    type: ClusterIP
+    port: 3000
+    annotations:
+      cloud.google.com/backend-config: '{"default": "affine-backendconfig"}'
+
+sync:
+  service:
+    type: ClusterIP
+    port: 3010
+    annotations:
+      cloud.google.com/backend-config: '{"default": "affine-backendconfig"}'
+
+web:
+  service:
+    type: ClusterIP
+    port: 8080
